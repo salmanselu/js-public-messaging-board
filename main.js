@@ -24,7 +24,7 @@ var main = function(req, res)
         { 
             var date = Date();
             
-            task += `<p class="font-face: sans-serif;">`+ q.task +`<br><a style="color: gray;">`+ String(date) +`</a></p><br><hr>and;
+            task += `<p class="font-face: sans-serif;">`+ q.task +`<br><a style="color: gray;">`+ String(date) +`</a></p><br><hr>`;
             body = task + data;
         }       
         res.write(body);
