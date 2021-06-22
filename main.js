@@ -28,7 +28,7 @@ var main = function(req, res)
             body = task + data;
         }       
         res.write(body);
-        //res.end();
+        res.end();
     });
     
 }
