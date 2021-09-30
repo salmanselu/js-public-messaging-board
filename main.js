@@ -2,7 +2,9 @@ var http = require('http');
 
 var url = require('url');
 
-messageData = {message:[]};
+messageData = { 'Access-Control-Allow-Origin': '*', 
+               message : []
+            };
 var main = function(req, res)
 {   
    var q = url.parse(req.url, true).query;
