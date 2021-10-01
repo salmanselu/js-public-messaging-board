@@ -14,6 +14,10 @@ var main = function(req, res)
          messageData.message.push(q.message);
          console.log(messageData);
       }
+      if(q.clear !== undefined && q.clear === true)
+      {
+         messageData.message = [];
+      }
       console.log(q);
       res.writeHead(200, {'Access-Control-Allow-Origin': '*'});
       res.write(JSON.stringify(messageData));
