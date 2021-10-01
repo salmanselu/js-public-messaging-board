@@ -14,7 +14,7 @@ var main = function(req, res)
          messageData.message.push(q.message);
          console.log(messageData);
       }
-      if(q.clear !== undefined && q.clear === true)
+      if(q.clear === true)
       {
          messageData.message = [];
       }
