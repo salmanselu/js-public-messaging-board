@@ -2,11 +2,12 @@ var http = require('http');
 
 var url = require('url');
 
-messageData = { headers: {'Access-Control-Allow-Origin': '*'}, 
+messageData = { 
                message : []
             };
 var main = function(req, res)
 {   
+   
    var q = url.parse(req.url, true).query;
    if(q.pathname !== '/'){  
       if(q.message !== undefined && q.message !== ""){
@@ -14,6 +15,7 @@ var main = function(req, res)
          console.log(messageData);
       }
       console.log(q);
+      res.writeHead(200, {'Access-Control-Allow-Origin': '*'});
       res.write(JSON.stringify(messageData));
       res.end();
    }
