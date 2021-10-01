@@ -10,11 +10,11 @@ var main = function(req, res)
    
    var q = url.parse(req.url, true).query;
    if(q.pathname !== '/'){  
-      if(q.message !== undefined && q.message !== ""){
+      if(q.message !== undefined && q.message !==""){
          messageData.message.push(q.message);
          console.log(messageData);
       }
-      if(q.clear === true)
+      if(q.clear === "true")
       {
          messageData.message = [];
       }
