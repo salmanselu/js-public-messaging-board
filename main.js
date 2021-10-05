@@ -2,7 +2,7 @@ var http = require('http');
 
 var url = require('url');
 
-messageData = { 
+var messageData = { 
                message : []
             };
 var main = function(req, res)
