@@ -1,5 +1,6 @@
-# js-test
+# node-js backend for simple messaging app
 
-Just testing some js
+Just testing some nodejs
 
-hosted at: https://salmanselu-testjs.herokuapp.com/
+Backend hosted at: https://salmanselu-testjs.herokuapp.com/
+Front end: https://pethu-chat.netlify.app
