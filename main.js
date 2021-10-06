@@ -1,9 +1,7 @@
 var http = require('http');
 
 var url = require('url');
-/*
-messageData = [message:{username:"Salman Nazeer", message:"hello world"}];
-*/
+
 messageData = [];
 var main = function(req, res)
 {   
