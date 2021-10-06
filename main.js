@@ -1,22 +1,22 @@
 var http = require('http');
 
 var url = require('url');
-
-var messageData = { 
-               message : []
-            };
+/*
+messageData = [message:{username:"Salman Nazeer", message:"hello world"}];
+*/
+messageData = [];
 var main = function(req, res)
 {   
    
    var q = url.parse(req.url, true).query;
    if(q.pathname !== '/'){  
       if(q.message !== undefined && q.message !==""){
-         messageData.message.push(q.message);
+         messageData.push({username: q.username, message: q.message});
          console.log(messageData);
       }
       if(q.clear === "true")
       {
-         messageData.message = [];
+         messageData = [];
       }
       console.log(q);
       res.writeHead(200, {'Access-Control-Allow-Origin': '*'});
